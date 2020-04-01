@@ -7,6 +7,7 @@ var diceDOM = document.querySelector('.dice');
 document.querySelector('.btn-roll').addEventListener('click', function () {
     if (gamePlaying) {
         var dice = Math.floor(Math.random() * 6) + 1;
+
         if (dice === 6)
             count++;
         diceDOM.style.display = 'block';
@@ -17,6 +18,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             document.querySelector('#score-' + activePlayer).textContent = '0';
             nextPlayer();
         }
+
         if (dice === 6 && dice_prev === 6) {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = '0';
